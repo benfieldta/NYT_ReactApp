@@ -1,0 +1,38 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin-bottom: 60px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  
+  .jumbotron {
+    flex: 0 0 100%; 
+    height: 200px;
+  }
+  
+  .footer {
+    flex: 1 0 100%; 
+    order: 1; 
+    margin-bottom: 0;
+    height: 30px;
+  }
+  
+  .row {
+    flex: 1 0 100%; 
+  }
+  
+  .gold {
+    color: gold;
+  }
+  
+  .quote {
+    padding-top: 20px;
+  }
