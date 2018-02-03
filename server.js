@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 app.use("/", routes);
 
-mongoose.connect("mongodb://benfieldta:password123@ds121268.mlab.com:21268/nyt_mongoose_search");
+const DB_CONNECTION = process.env.NODE_ENV === 'development' ? 'mongodb://@localhost:27017/nyt_mongoose_search' : 'mongodb://benfieldta:password123@ds121268.mlab.com:21268/nyt_mongoose_search';
+mongoose.connect(DB_CONNECTION);
 var db = mongoose.connection;
 
 // Show any mongoose errors
